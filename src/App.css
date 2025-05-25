@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  box-shadow: 10px 0 10px;
+  padding: 20px 20px 0 20px;
+  border-radius: 3px;
+}
+
+.form-ip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  width: 100%;
+  justify-content: center;
+}
+
+.todo-form input[type="text"] {
+  flex-grow: 0.5;
+  height: 25px;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  width: auto;
+}
+
+.icon.task {
+  color: rgb(0, 0, 0);
+  margin-left: 10px;
+}
+
+form input[type="submit"] {
+  cursor: pointer; 
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+}
+
+.li{
+    width: 100%;
+    margin: 10px auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    height: 100%;
+}
+
+.li table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table .task-item{
+    width: 80%;
+    word-break: break-word;
+}
+
+table .task-edit,
+table .task-delete{
+    width: 10%;
+}
+
+.task-edit .edit-btn,
+.task-delete .delete-btn{
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid black;
+}
+
+.task-edit .edit-btn:hover,
+.task-delete .delete-btn:hover{
+    border-radius: 5px;
+    transition: all 0.1s ease-in;
+}
+
+.task-text .task-checkbox {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.task-text .task-checkbox:checked {
+    background-color: black;
+}
+
+.task-text .task-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    margin-left: 3px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.task-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
